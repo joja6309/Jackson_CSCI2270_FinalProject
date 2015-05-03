@@ -95,7 +95,7 @@ string User:: DecimaltoBinary(int D_num)
     
    if (D_num % 2  == 0)
    {
-     return_value = return_value + "0" ;
+     return_value = return_value + "0" ; 
    } 
    else {
      
@@ -107,8 +107,25 @@ string User:: DecimaltoBinary(int D_num)
 stringstream ss; 
  ss<<return_value; 
  string str = ss.str();
+ str = reverseOrder(str); //Added by Aubree Lytwyn
 	return str;	
 } 
+
+//reverseOrder created/added by Aubree Lytwyn
+/* string User::reverseOrder(string str)
+ * This function takes the orginal str created in DecimaltoBinary(int D_num) and reverses the order of the orginal string
+ * str = reverseOrder(str);
+ * pre-conditions: Must have a digit converted to a binary string (done in DecimaltoBinary().
+ * post-conditions: str is reversed in order to display the correct binary number */
+string User::reverseOrder(string str)
+{
+	string strReverse;
+	for(int i = str.size(); i > -1 ; i--)
+	{
+		strReverse = strReverse + str[i];
+	}
+	return strReverse;
+}
 void  User:: add2calculationvector(Calculations newcalc) 
 { 
 	
