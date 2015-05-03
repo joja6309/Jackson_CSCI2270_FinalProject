@@ -30,6 +30,8 @@ class User
    std::string DecimaltoBinary(int D_num);
    void add2calculationvector(Calculations acalculation);
    int changeAcharacter(std::string aint); 
+   
+   std::string reverseOrder(std::string str); //added by Aubree Lytwyn
 
    
    private:
